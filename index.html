@@ -4,10 +4,16 @@
     <title>EasyRPG Player Compatibility List</title>
     <meta charset='utf-8'>
     <style>
+      html, body {
+        height: 100%;
+      }
+      
       body {
         margin: 0;
         font-family: Ubuntu, "Droid Sans", "Trebuchet MS", sans-serif;
         background: #202020;
+        display: flex;
+        flex-direction: column;
       }
       
       #topcontainer, #bottomcontainer {
@@ -23,6 +29,7 @@
       #bottomcontainer {
         background-color: #F5F5F5;
         color: #000000;
+        flex: 1 0 auto;
       }
       
       input {
@@ -48,6 +55,10 @@
       
       .gamelist>li {
         margin: 1em;
+        transition: box-shadow 0.4s;
+      }
+      
+      .gamelist>li.active {
         box-shadow: 10px 10px 15px rgba(0,0,0,0.1);
       }
       
@@ -61,10 +72,10 @@
         text-align: left;
         border: none;
         outline: none;
-        transition: 0.4s;
+        transition: background-color 0.4s;
       }
       
-      .name.active, .name:hover {
+      .active>.name, .name:hover {
         background-color: #ccc;
       }
       
@@ -117,6 +128,7 @@
       footer {
         padding: 1em;
         color: #fff;
+        flex-shrink: 0;
       }
       
       .timestamp {
@@ -1515,12 +1527,12 @@
       </main>
     </div>
     <script>
-      function on_game_click(event) {
-        toggle_info(event.target)
+      function on_name_click(event) {
+        toggle_info(event.target.parentElement);
       }
       
       function on_status_click(event) {
-        toggle_info(event.target.parentElement)
+        toggle_info(event.target.parentElement.parentElement);
       }
       
       function toggle_info(game) {
@@ -1534,29 +1546,29 @@
       function activate_game(game) {
         game.classList.add("active");
       
-        var info = game.nextElementSibling;
+        var info = game.children[0].nextElementSibling;
         info.style.maxHeight = info.scrollHeight + "px";
       }
       
       function deactivate_game(game) {
         game.classList.remove("active");
       
-        var info = game.nextElementSibling;
+        var info = game.children[0].nextElementSibling;
         info.style.maxHeight = null;
       }
       
       var i;
       
       // get all games
-      var acc = document.getElementsByClassName("name");
-      var games = new Array(acc.length);
-      for (i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", on_game_click);
-        acc[i].children[0].addEventListener("click", on_status_click);
+      var gn = document.getElementsByClassName("name");
+      var games = new Array(gn.length);
+      for (i = 0; i < gn.length; i++) {
+        gn[i].addEventListener("click", on_name_click);
+        gn[i].children[0].addEventListener("click", on_status_click);
       
         // names
-        var name = acc[i].innerText.trim();
-        var altname = acc[i].nextElementSibling.children[0].firstElementChild;
+        var name = gn[i].innerText.trim();
+        var altname = gn[i].nextElementSibling.children[0].firstElementChild;
         if (altname != null && altname.className == "altname") {
           name += ", " + altname.innerText;
         }
@@ -1567,21 +1579,20 @@
       function filter_games() {
         var shown = new Array();
         for (i = 0; i < games.length; i++) {
-          var cont = acc[i].parentElement;
+          var cont = gn[i].parentElement;
           if (games[i].toLowerCase().includes(srch.value.toLowerCase())) {
             cont.hidden = false;
-            activate_game(acc[i]);
             shown.push(i);
           } else {
             cont.hidden = true;
-            deactivate_game(acc[i]);
           }
+          deactivate_game(cont);
         }
       
-        // limit info
-        if (shown.length > 5) {
+        // limit info display
+        if (shown.length <= 5) {
           for (i = 0; i < shown.length; i++) {
-            deactivate_game(acc[shown[i]]);
+            activate_game(gn[shown[i]].parentElement);
           }
         }
       }
@@ -1602,7 +1613,7 @@
     </script>
     <footer>
       <p>Currently there are 122 games in this list. Contribute to this list
-        <a href="https://github.com/carstene1ns-EasyRPG-Player-compatibilitylist">on GitHub</a>.</p>
+        <a href="https://github.com/carstene1ns/EasyRPG-Player-compatibilitylist">on GitHub</a>.</p>
       <hr>
       <p class='timestamp'>Updated on December 27, 2020.</p>
     </footer>
