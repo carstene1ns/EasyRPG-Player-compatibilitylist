@@ -22,7 +22,8 @@ clean:
 	rm -f $(COMPATLIST)
 
 Gemfile.lock: Gemfile
-	bundle install
+	@bundle install
+	@touch $@
 
 new:
 	@ruby new-game.rb
