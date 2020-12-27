@@ -1,9 +1,9 @@
-function on_game_click(event) {
-  toggle_info(event.target)
+function on_name_click(event) {
+  toggle_info(event.target.parentElement);
 }
 
 function on_status_click(event) {
-  toggle_info(event.target.parentElement)
+  toggle_info(event.target.parentElement.parentElement);
 }
 
 function toggle_info(game) {
@@ -17,29 +17,29 @@ function toggle_info(game) {
 function activate_game(game) {
   game.classList.add("active");
 
-  var info = game.nextElementSibling;
+  var info = game.children[0].nextElementSibling;
   info.style.maxHeight = info.scrollHeight + "px";
 }
 
 function deactivate_game(game) {
   game.classList.remove("active");
 
-  var info = game.nextElementSibling;
+  var info = game.children[0].nextElementSibling;
   info.style.maxHeight = null;
 }
 
 var i;
 
 // get all games
-var acc = document.getElementsByClassName("name");
-var games = new Array(acc.length);
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", on_game_click);
-  acc[i].children[0].addEventListener("click", on_status_click);
+var gn = document.getElementsByClassName("name");
+var games = new Array(gn.length);
+for (i = 0; i < gn.length; i++) {
+  gn[i].addEventListener("click", on_name_click);
+  gn[i].children[0].addEventListener("click", on_status_click);
 
   // names
-  var name = acc[i].innerText.trim();
-  var altname = acc[i].nextElementSibling.children[0].firstElementChild;
+  var name = gn[i].innerText.trim();
+  var altname = gn[i].nextElementSibling.children[0].firstElementChild;
   if (altname != null && altname.className == "altname") {
     name += ", " + altname.innerText;
   }
@@ -50,21 +50,20 @@ for (i = 0; i < acc.length; i++) {
 function filter_games() {
   var shown = new Array();
   for (i = 0; i < games.length; i++) {
-    var cont = acc[i].parentElement;
+    var cont = gn[i].parentElement;
     if (games[i].toLowerCase().includes(srch.value.toLowerCase())) {
       cont.hidden = false;
-      activate_game(acc[i]);
       shown.push(i);
     } else {
       cont.hidden = true;
-      deactivate_game(acc[i]);
     }
+    deactivate_game(cont);
   }
 
-  // limit info
-  if (shown.length > 5) {
+  // limit info display
+  if (shown.length <= 5) {
     for (i = 0; i < shown.length; i++) {
-      deactivate_game(acc[shown[i]]);
+      activate_game(gn[shown[i]].parentElement);
     }
   }
 }
