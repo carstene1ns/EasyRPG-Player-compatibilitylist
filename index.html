@@ -1,0 +1,1610 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title>EasyRPG Player Compatibility List</title>
+    <meta charset='utf-8'>
+    <style>
+      body {
+        margin: 0;
+        font-family: Ubuntu, "Droid Sans", "Trebuchet MS", sans-serif;
+        background: #202020;
+      }
+      
+      #topcontainer, #bottomcontainer {
+        padding: 1em;
+        text-align: center;
+      }
+      
+      #topcontainer {
+        background-color: #3C8025;
+        color: #FFFFFF;
+      }
+      
+      #bottomcontainer {
+        background-color: #F5F5F5;
+        color: #000000;
+      }
+      
+      input {
+        font-size: 1.1em;
+        padding: 0.4em;
+        width: 400px;
+        border: 1px solid #ccc;
+        background: white;
+      }
+      
+      input:focus {
+        border: 2px solid #aaa;
+        margin: -1px;
+      }
+      
+      .gamelist {
+        list-style-type: none;
+        padding: 0;
+        min-width: 400px;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      
+      .gamelist>li {
+        margin: 1em;
+        box-shadow: 10px 10px 15px rgba(0,0,0,0.1);
+      }
+      
+      .name {
+        font-size: 1.2em;
+        background-color: #ddd;
+        color: #444;
+        cursor: pointer;
+        padding: 10px;
+        width: 100%;
+        text-align: left;
+        border: none;
+        outline: none;
+        transition: 0.4s;
+      }
+      
+      .name.active, .name:hover {
+        background-color: #ccc;
+      }
+      
+      .altname {
+        font-style: italic;
+        margin-bottom: 0.5em;
+      }
+      
+      .infocontainer {
+        background-color: #FFFFFF;
+        text-align: left;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+      }
+      
+      .info {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-top-width: 0;
+      }
+      
+      .info>pre {
+        margin: 0;
+      }
+      
+      .status {
+        width: 60px;
+        height: 0.8em;
+        display: inline-block;
+        border: 1px solid #bbbbbb;
+      }
+      
+      .status-1 {
+        background-color: #FF0000;
+      }
+      .status-2 {
+        background-color: #FF7F00;
+      }
+      .status-3 {
+        background-color: #FFFF00;
+      }
+      .status-4 {
+        background-color: #7FFF00;
+      }
+      .status-5 {
+        background-color: #00FF00;
+      }
+      
+      footer {
+        padding: 1em;
+        color: #fff;
+      }
+      
+      .timestamp {
+        text-align: right;
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <div id='topcontainer'>
+      <header>
+        <h1>EasyRPG Player Compatibility List</h1>
+      </header>
+      <nav>
+        <form id='search' onsubmit='return false'>
+          <input autofocus placeholder='Enter game to search…'>
+        </form>
+      </nav>
+    </div>
+    <div id='bottomcontainer'>
+      <main>
+        <ul class='gamelist'>
+          <li>
+            <button class='name' type='button'>
+              .flow
+              <span class='status status-5' title='completable'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              A Gate into Eternity
+              <span class='status status-3' title='playable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              AE
+              <span class='status status-5' title='completable'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Aedemphia
+              <span class='status status-3' title='playable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Ahriman’s Prophecy
+              <span class='status status-3' title='playable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Alex Unleashed - Short
+              <span class='status status-3' title='playable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              ALEX/JENQ: Fairy Forest
+              <span class='status status-5' title='completable'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Ara Fell
+              <span class='status status-3' title='playable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Betwixt Demo
+              <span class='status status-4' title='completable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Blaze of Dragons
+              <span class='status status-4' title='completable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                Known problems:
+                <pre>Minor errors, like multiple attack weapons just attack once.</pre>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Blue Memories
+              <span class='status status-5' title='completable'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Blue Skies
+              <span class='status status-3' title='playable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Boy Ichiro’s Modesty
+              <span class='status status-5' title='completable'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Buried Barry
+              <span class='status status-3' title='playable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                Known problems:
+                <pre>Uses custom "Enter Hero Name" scene for a password input.</pre>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Calm Falls
+              <span class='status status-5' title='completable'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Captain America gegen die Nazimutantenbestien von Andromeda
+              <span class='status status-1' title='not playable'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Chain of Retribution
+              <span class='status status-3' title='playable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Dandelion
+              <span class='status status-5' title='completable'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Dark Quest
+              <span class='status status-5' title='completable'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Dead Again
+              <span class='status status-4' title='completable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Deep 8
+              <span class='status status-3' title='playable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                Known problems:
+                <pre>Uses some customizations (needs engine modifications)</pre>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Desert Nightmare
+              <span class='status status-3' title='playable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Dhux’s Scar
+              <span class='status status-3' title='playable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Die Bücher Luzifers (1&2)
+              <span class='status status-3' title='playable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Die Reise ins All
+              <span class='status status-3' title='playable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Dirge of Doningoth (Demo)
+              <span class='status status-5' title='completable'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Doraemon: Nobita’s Resident Evil 2
+              <span class='status status-3' title='playable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                <div class='altname'>nobihaza 2</div>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Dragonball Z: Legend of Z
+              <span class='status status-3' title='playable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Dungeoneer: A Beautiful Escape
+              <span class='status status-3' title='playable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Earth Birth
+              <span class='status status-3' title='playable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Echoes of Mind
+              <span class='status status-4' title='completable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Echoes of the Past
+              <span class='status status-3' title='playable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              El Dorado (1&2)
+              <span class='status status-3' title='playable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              El Legado de Maldo
+              <span class='status status-4' title='completable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                Known problems:
+                <pre>Minor graphical glitches.</pre>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Eling First Dimension
+              <span class='status status-3' title='playable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Embric of Wulfhammer’s Castle
+              <span class='status status-4' title='completable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              End Roll
+              <span class='status status-4' title='completable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                Known problems:
+                <pre>Visual issues</pre>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Endzeit, Folge 1
+              <span class='status status-1' title='not playable'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Engalia - The Wager
+              <span class='status status-4' title='completable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              exile’s journey
+              <span class='status status-2' title='game starts'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                Known problems:
+                <pre>unsupported sound files</pre>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Farethere City
+              <span class='status status-4' title='completable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                Known problems:
+                <pre>Some bugs with food consumption.</pre>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Fifth Era: Fragments of The Holy Stone
+              <span class='status status-5' title='completable'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Final Fantasy Blackmoon Prophecy
+              <span class='status status-3' title='playable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Fleshchild
+              <span class='status status-5' title='completable'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Ghost Party
+              <span class='status status-5' title='completable'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Grimorum
+              <span class='status status-5' title='completable'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Grimps: Squeaking of the Dead
+              <span class='status status-4' title='completable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                Known problems:
+                <pre>'old: cannot complete level 4 (bug #1595)'</pre>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Heaven and Hell - Episode 3
+              <span class='status status-3' title='playable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                Known problems:
+                <pre>Battle issues</pre>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Heroes Realm
+              <span class='status status-3' title='playable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              HOME
+              <span class='status status-3' title='playable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                Known problems:
+                <pre>Uses a custom menu during startup that is unsupported.</pre>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Ib
+              <span class='status status-4' title='completable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                Known problems:
+                <pre>Video playback does not work</pre>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Jasei no in - The Serpent’s Lust
+              <span class='status status-4' title='completable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              JoJo’s Bizarre Adventure - the 7th Stand User
+              <span class='status status-3' title='playable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                Known problems:
+                <pre>SHIFT key does not work (bug #997)</pre>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Knights of Gaia (Demo)
+              <span class='status status-5' title='completable'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Lakria Legends
+              <span class='status status-3' title='playable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                Known problems:
+                <pre>Several important plugins are not supported yet.</pre>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Last Quest IV
+              <span class='status status-3' title='playable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Lavender
+              <span class='status status-5' title='completable'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Laxius Power 1&2
+              <span class='status status-3' title='playable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              LCD DEM
+              <span class='status status-4' title='completable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Legend od Heroen (Demo)
+              <span class='status status-5' title='completable'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Love is Dead
+              <span class='status status-3' title='playable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Mimicry Man
+              <span class='status status-5' title='completable'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Moby Housekeeper
+              <span class='status status-3' title='playable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Moloch City
+              <span class='status status-1' title='not playable'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Mondschein
+              <span class='status status-3' title='playable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                Known problems:
+                <pre>Needs special RTP files</pre>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Monigote Fantasy
+              <span class='status status-3' title='playable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Moon tree
+              <span class='status status-3' title='playable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Mother Cognitive Dissonance
+              <span class='status status-3' title='playable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Mystic Star
+              <span class='status status-3' title='playable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Notes on the Etgoesian Crisis:Plus
+              <span class='status status-5' title='completable'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              OFF
+              <span class='status status-4' title='completable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Ollimio Demo
+              <span class='status status-4' title='completable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Oneshot
+              <span class='status status-1' title='not playable'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                Known problems:
+                <pre>Game controls the runtime externally (fork available)</pre>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Paranormal Syndrome
+              <span class='status status-3' title='playable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Pen Pals
+              <span class='status status-5' title='completable'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Peuteris Grey
+              <span class='status status-3' title='playable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                Known problems:
+                <pre>Issues with moving after loading.</pre>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Piratenweinacht
+              <span class='status status-3' title='playable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                Known problems:
+                <pre>Display issues</pre>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Pom Get’s WiFi
+              <span class='status status-4' title='completable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                Known problems:
+                <pre>'battle glitches (issue #821)'</pre>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Project Rose
+              <span class='status status-3' title='playable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Razas
+              <span class='status status-3' title='playable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Resident Evil - It Is Escape
+              <span class='status status-3' title='playable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Rosy Despair
+              <span class='status status-3' title='playable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Sacred Tears TRUE (Prologue)
+              <span class='status status-3' title='playable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Scaredy Cat (Demo)
+              <span class='status status-5' title='completable'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Seraphic Blue
+              <span class='status status-5' title='completable'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Space Funeral
+              <span class='status status-4' title='completable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                Known problems:
+                <pre>Graphical glitches</pre>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Spiritome (Demo)
+              <span class='status status-5' title='completable'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Standstill Girl
+              <span class='status status-3' title='playable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Star Enforcers in the Alien Cafe
+              <span class='status status-3' title='playable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                Known problems:
+                <pre>The 4th puzzle crashes</pre>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Steel Spirit SaGa
+              <span class='status status-3' title='playable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Sternenkindsaga
+              <span class='status status-3' title='playable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Stories of Harmony
+              <span class='status status-5' title='completable'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Super Columbine Massacre RPG!
+              <span class='status status-3' title='playable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Super Mario RPG The Seven Sages
+              <span class='status status-3' title='playable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                Known problems:
+                <pre>Visual issues</pre>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Superstar Hero
+              <span class='status status-4' title='completable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              The Bad Guy (Demo)
+              <span class='status status-4' title='completable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              The Clock of Atonement
+              <span class='status status-5' title='completable'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              The Garden
+              <span class='status status-5' title='completable'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              The Gray Garden
+              <span class='status status-5' title='completable'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                Known problems:
+                <pre>Uses custom EXFONT</pre>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              The Huntress of the Hollow
+              <span class='status status-4' title='completable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                Known problems:
+                <pre>Battle system</pre>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              The Iron Age
+              <span class='status status-5' title='completable'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              The Maid of Fairewell Heights
+              <span class='status status-5' title='completable'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              The Mysterious Cities of Gold: The Curse of Amirax
+              <span class='status status-3' title='playable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              The Old Ones
+              <span class='status status-5' title='completable'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Theia the Crimson Eclipse
+              <span class='status status-1' title='not playable'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                Known problems:
+                <pre>Uses DynRPG</pre>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Tobira no densetsu
+              <span class='status status-3' title='playable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Unterwegs in Düsterburg
+              <span class='status status-5' title='completable'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Vampires Dawn (1&2)
+              <span class='status status-4' title='completable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                Known problems:
+                <pre>battle glitches</pre>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Velsarbor
+              <span class='status status-3' title='playable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                Known problems:
+                <pre>needs special RTP files</pre>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Very Retrouvaille
+              <span class='status status-5' title='completable'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Villnoire
+              <span class='status status-4' title='completable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Violated Heroine
+              <span class='status status-3' title='playable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Wadanohara and the Great Blue Sea
+              <span class='status status-5' title='completable'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                Known problems:
+                <pre>uses custom EXFONT</pre>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Walking On A Star Unknown
+              <span class='status status-4' title='completable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Wannabe Smash Bros.
+              <span class='status status-3' title='playable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                <div class='altname'>もしもスマブラだったら</div>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              White Magic Demo
+              <span class='status status-1' title='not playable'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Win’ Wind’ Windy
+              <span class='status status-3' title='playable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Witch’s Heart
+              <span class='status status-3' title='playable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Wolfenhain
+              <span class='status status-3' title='playable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                Known problems:
+                <pre>visual issues</pre>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              You and I
+              <span class='status status-5' title='completable'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Yume 2kki
+              <span class='status status-4' title='completable, but problems'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+          <li>
+            <button class='name' type='button'>
+              Yume Nikki
+              <span class='status status-5' title='completable'></span>
+            </button>
+            <div class='infocontainer'>
+              <div class='info'>
+                No further information
+              </div>
+            </div>
+          </li>
+        </ul>
+      </main>
+    </div>
+    <script>
+      function on_game_click(event) {
+        toggle_info(event.target)
+      }
+      
+      function on_status_click(event) {
+        toggle_info(event.target.parentElement)
+      }
+      
+      function toggle_info(game) {
+        if (game.classList.contains("active")) {
+          deactivate_game(game);
+        } else {
+          activate_game(game);
+        }
+      }
+      
+      function activate_game(game) {
+        game.classList.add("active");
+      
+        var info = game.nextElementSibling;
+        info.style.maxHeight = info.scrollHeight + "px";
+      }
+      
+      function deactivate_game(game) {
+        game.classList.remove("active");
+      
+        var info = game.nextElementSibling;
+        info.style.maxHeight = null;
+      }
+      
+      var i;
+      
+      // get all games
+      var acc = document.getElementsByClassName("name");
+      var games = new Array(acc.length);
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", on_game_click);
+        acc[i].children[0].addEventListener("click", on_status_click);
+      
+        // names
+        var name = acc[i].innerText.trim();
+        var altname = acc[i].nextElementSibling.children[0].firstElementChild;
+        if (altname != null && altname.className == "altname") {
+          name += ", " + altname.innerText;
+        }
+        games[i] = name;
+      }
+      
+      // search field
+      function filter_games() {
+        var shown = new Array();
+        for (i = 0; i < games.length; i++) {
+          var cont = acc[i].parentElement;
+          if (games[i].toLowerCase().includes(srch.value.toLowerCase())) {
+            cont.hidden = false;
+            activate_game(acc[i]);
+            shown.push(i);
+          } else {
+            cont.hidden = true;
+            deactivate_game(acc[i]);
+          }
+        }
+      
+        // limit info
+        if (shown.length > 5) {
+          for (i = 0; i < shown.length; i++) {
+            deactivate_game(acc[shown[i]]);
+          }
+        }
+      }
+      
+      var srch = document.getElementById("search").children[0];
+      srch.addEventListener("input", filter_games);
+      
+      // permalink
+      srch.parentElement.addEventListener("submit", function(event) {
+        event.preventDefault();
+        window.location.hash = encodeURIComponent(srch.value);
+      });
+      if (window.location.hash) {
+        var hash = window.location.hash.replace(/^#/, '');
+        srch.value = decodeURIComponent(hash);
+        filter_games();
+      }
+    </script>
+    <footer>
+      <p>Currently there are 122 games in this list. Contribute to this list
+        <a href="https://github.com/carstene1ns-EasyRPG-Player-compatibilitylist">on GitHub</a>.</p>
+      <hr>
+      <p class='timestamp'>Updated on December 27, 2020.</p>
+    </footer>
+  </body>
+</html>
