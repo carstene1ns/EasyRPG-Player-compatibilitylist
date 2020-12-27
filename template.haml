@@ -1,0 +1,42 @@
+!!! 5
+%html{:lang => "en"}
+  %head
+    %title= @title
+    %meta{:charset => "utf-8"}
+    %style= @css
+  %body
+    #topcontainer
+      %header
+        %h1= @title
+
+      %nav
+        %form#search{onsubmit:"return false"}
+          %input{placeholder:"Enter game to search…", autofocus:true}
+
+    #bottomcontainer
+      %main
+        %ul.gamelist
+          - @games.each do |game|
+            %li
+              %button.name{type:"button"}
+                = game["name"]
+                %span{class:"status status-#{game["status"]}", 
+                title:@status_text[game["status"]]}
+              .infocontainer
+                .info
+                  - if game["alternative-names"]
+                    %div.altname= game["alternative-names"].join(", ")
+                  - if game["problems"]
+                    Known problems:
+                    %pre= game["problems"]
+                  - else
+                    No further information
+
+    %script=@js
+
+    %footer
+      :markdown
+        Currently there are #{@games.count} games in this list. Contribute to this list
+        [on GitHub](https://github.com/carstene1ns-EasyRPG-Player-compatibilitylist).
+      %hr
+      %p.timestamp=@timestamp
